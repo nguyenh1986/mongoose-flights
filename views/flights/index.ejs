@@ -18,7 +18,7 @@
 				<th>airport </th>
 				<th>flightNo</th>
 				<th>Depart</th>
-				
+				<th>Details</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -34,13 +34,11 @@
 					<td>
 						<%= m.flightNo %>
 					</td>
-          <!-- finish the ternary expression to display
-                       ' Yes' or 'Nope' -->
 					<td>
-						<%= m.departs%>
+						<%= m.departs.toLocaleDateString() %>
 					</td>
+					<td><a href="/flights/<%= m._id%>">detail</a></td>
 				</tr>
-				<!-- Close the forEach using EJS here -->
 				<% }) %>
 		</tbody>
 	</table>
